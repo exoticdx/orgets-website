@@ -12,6 +12,8 @@
   "dependencies": {
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.4.530",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-helmet-async": "^2.0.5",
