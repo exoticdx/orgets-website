@@ -1,13 +1,111 @@
 import bananaPowderImg from '../assets/banana_powder.jpg';
+import beetrootPowderImg from '../assets/beetroot_powder.jpg';
+import applePowderImg from '../assets/apple_powder.jpg';
+import amlaPowderImg from '../assets/amla_powder.jpg';
+import blueberryPowderImg from '../assets/blueberry_powder.jpg';
+import aloeVeraPowderImg from '../assets/aloe_vera_powder.jpg';
+import coconutWaterPowderImg from '../assets/coconut_water_powder.jpg';
+import chikooPowderImg from '../assets/chikoo_powder.jpg';
+import blackGrapePowderImg from '../assets/black_grape_powder.jpg';
+import custardApplePowderImg from '../assets/custard_apple_powder.jpg';
+import mangoPowderImg from '../assets/mango_powder.jpg';
+import moringaPowderImg from '../assets/moringa_powder.jpg';
+import pinkGuavaPowderImg from '../assets/pink_guava_powder.jpg';
+import mulberryPowderImg from '../assets/mulberry_powder.jpg';
+import cranberryPowderImg from '../assets/cranberry_powder.jpg';
+import datesPowderImg from '../assets/dates_powder.jpg';
+import dragonFruitPowderImg from '../assets/dragon_fruit_powder.jpg';
+import guavaWhitePowderImg from '../assets/guava_white_powder.jpg';
+import jamunPowderImg from '../assets/jamun_powder.jpg';
+import litchiPowderImg from '../assets/litchi_powder.jpg';
+import kiwiPowderImg from '../assets/kiwi_powder.jpg';
+import acaiBerryPowderImg from '../assets/acai_berry_powder.jpg';
+import papayaPowderImg from '../assets/papaya_powder.jpg';
+import pineapplePowderImg from '../assets/pineapple_powder.jpg';
+import raspberryPowderImg from '../assets/raspberry_powder.jpg';
+import strawberryPowderImg from '../assets/strawberry_powder.jpg';
+import sugarcanePowderImg from '../assets/sugarcane_powder.jpg';
+import tamarindPowderImg from '../assets/tamarind_powder.jpg';
+import watermelonPowderImg from '../assets/watermelon_powder.jpg';
+import avocadoPowderImg from '../assets/avocado_powder.jpg';
+import cherryPowderImg from '../assets/cherry_powder.jpg';
+import passionFruitPowderImg from '../assets/passion_fruit_powder.jpg';
+import steviaPowderImg from '../assets/stevia_powder.jpg';
+import blackberryPowderImg from '../assets/blackberry_powder.jpg';
+import jaggeryPowderImg from '../assets/jaggery_powder.jpg';
+import jaggeryCubesImg from '../assets/jaggery_cubes.jpg';
 
 // Helper to get image URL (using placeholder if local image not available)
 const getProductImage = (id) => {
     if (id === 'banana-powder') return bananaPowderImg;
+    if (id === 'spray-dried-beetroot-powder') return beetrootPowderImg;
+    if (id === 'spray-dried-apple-powder') return applePowderImg;
+    if (id === 'spray-dried-amla-fruit-powder') return amlaPowderImg;
+    if (id === 'spray-dried-blueberry-powder') return blueberryPowderImg;
+    if (id === 'spray-dried-aloe-vera-juice-powder') return aloeVeraPowderImg;
+    if (id === 'spray-dried-coconut-water-powder') return coconutWaterPowderImg;
+    if (id === 'spray-dried-chikoo-powder') return chikooPowderImg;
+    if (id === 'spray-dried-black-grape-powder') return blackGrapePowderImg;
+    if (id === 'spray-dried-custard-apple-powder') return custardApplePowderImg;
+    if (id === 'spray-dried-mango-powder') return mangoPowderImg;
+    if (id === 'spray-dried-moringa-powder') return moringaPowderImg;
+    if (id === 'spray-dried-pink-guava-powder') return pinkGuavaPowderImg;
+    if (id === 'spray-dried-mulberry-powder') return mulberryPowderImg;
+    if (id === 'spray-dried-cranberry-powder') return cranberryPowderImg;
+    if (id === 'spray-dried-dates-powder') return datesPowderImg;
+    if (id === 'spray-dried-dragon-fruit-powder') return dragonFruitPowderImg;
+    if (id === 'spray-dried-white-guava-powder') return guavaWhitePowderImg;
+    if (id === 'spray-dried-jamun-fruit-powder') return jamunPowderImg;
+    if (id === 'spray-dried-litchi-powder') return litchiPowderImg;
+    if (id === 'spray-dried-kiwi-powder') return kiwiPowderImg;
+    if (id === 'spray-dried-acai-berry-powder') return acaiBerryPowderImg;
+    if (id === 'spray-dried-papaya-powder') return papayaPowderImg;
+    if (id === 'spray-dried-pineapple-powder') return pineapplePowderImg;
+    if (id === 'spray-dried-raspberry-powder') return raspberryPowderImg;
+    if (id === 'spray-dried-strawberry-powder') return strawberryPowderImg;
+    if (id === 'spray-dried-sugarcane-powder') return sugarcanePowderImg;
+    if (id === 'spray-dried-tamarind-powder') return tamarindPowderImg;
+    if (id === 'spray-dried-watermelon-powder') return watermelonPowderImg;
+    if (id === 'spray-dried-avocado-powder') return avocadoPowderImg;
+    if (id === 'spray-dried-cherry-powder') return cherryPowderImg;
+    if (id === 'spray-dried-passion-fruit-powder') return passionFruitPowderImg;
+    if (id === 'spray-dried-stevia-powder') return steviaPowderImg;
+    if (id === 'spray-dried-blackberry-powder') return blackberryPowderImg;
+    if (id === 'jaggery-powder') return jaggeryPowderImg;
+    if (id === 'jaggery-cubes') return jaggeryCubesImg;
     // Use a generic placeholder with the product name for others
     return `https://placehold.co/600x400/f3f4f6/005826?text=${id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('+')}`;
 };
 
 export const products = [
+    {
+        id: "jaggery-powder",
+        name: "Jaggery Powder",
+        tag: "Natural Sweetener",
+        description: "Premium Golden Jaggery Powder | Chemical-Free 100% Natural, free-flowing sugarcane powder.",
+        longDescription: "Orgets Premium Jaggery Powder (Export Grade) Sourced from the finest sugarcane fields of Maharashtra. A natural, unrefined sweetener that retains all essential minerals and vitamins. Processed using traditional chemical-free clarification methods.",
+        specs: [
+            "Golden Granular Texture",
+            "Moisture Controlled (<3%)",
+            "Nutrient Dense (Iron, Magnesium)",
+            "Chemical-Free"
+        ],
+        image: getProductImage("jaggery-powder")
+    },
+    {
+        id: "jaggery-cubes",
+        name: "Jaggery Cubes",
+        tag: "Natural Sweetener",
+        description: "Authentic Jaggery Cubes | Traditional Taste Pure concentrated sugarcane juice molded into hygienic, bite-sized cubes.",
+        longDescription: "Orgets Traditional Jaggery Cubes Experience the authentic taste of rural India with our Jaggery Cubes. Made by concentrating pure sugarcane juice to the perfect crystallization point, these cubes offer the rich, earthy sweetness of traditional 'Gur' with the convenience of modern shapes. Hygienically processed and vacuum-packed.",
+        specs: [
+            "Pre-cut Uniform Cubes",
+            "Deep Caramel-Molasses Flavor",
+            "Hygienically Processed",
+            "Preservative-Free"
+        ],
+        image: getProductImage("jaggery-cubes")
+    },
     {
         id: "spray-dried-beetroot-powder",
         name: "Spray Dried Beetroot Powder",
@@ -467,5 +565,14 @@ export const products = [
         description: 'Natural freeze-dried banana powder for baby food and confectionery.',
         longDescription: 'Premium Freeze Dried Banana Powder made from ripe bananas. Retains the natural flavor, color, and nutritional value of fresh bananas. Excellent for baby food, bakery products, smoothies, and confectionery.',
         specs: ['Origin: India', 'Process: Freeze Dried', 'Additives: None', 'Shelf Life: 18 Months']
+    },
+    {
+        id: 'spray-dried-milk-powder',
+        name: 'Spray Dried Milk Powder',
+        tag: 'Dairy Product Powder',
+        image: getProductImage("spray-dried-milk-powder"),
+        description: 'Premium quality spray dried milk powder.',
+        longDescription: 'High-quality milk powder produced using advanced spray drying technology. Ideal for confectionery, bakery, and beverage applications.',
+        specs: ['Rich in Calcium', 'Protein Rich', 'Vegetarian', 'Shelf Life: 12 Months']
     }
 ];

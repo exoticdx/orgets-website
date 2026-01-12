@@ -7,6 +7,7 @@ import Modal from './components/ui/Modal';
 import RequestQuoteForm from './components/sections/RequestQuoteForm';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
+import CategoryPage from './pages/CategoryPage';
 import './App.css';
 
 const ScrollToTop = () => {
@@ -18,29 +19,25 @@ const ScrollToTop = () => {
 };
 
 function App() {
-    const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
-
-    const openQuoteModal = () => setIsQuoteModalOpen(true);
-    const closeQuoteModal = () => setIsQuoteModalOpen(false);
+    const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
     return (
         <div className="app">
             <ScrollToTop />
-            <Navbar onOpenQuote={openQuoteModal} />
-            <main>
+            <Layout onOpenQuote={() => setIsQuoteOpen(true)}>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/product/:id" element={<ProductDetail />} />
+                    <Route path="/product/:id" element={<ProductDetail onOpenQuote={() => setIsQuoteOpen(true)} />} />
+                    <Route path="/category/:categoryId" element={<CategoryPage />} />
                 </Routes>
-            </main>
-            <Footer />
+            </Layout>
 
             <Modal
-                isOpen={isQuoteModalOpen}
-                onClose={closeQuoteModal}
+                isOpen={isQuoteOpen}
+                onClose={() => setIsQuoteOpen(false)}
                 title="Request a Quote"
             >
-                <RequestQuoteForm onClose={closeQuoteModal} />
+                <RequestQuoteForm onClose={() => setIsQuoteOpen(false)} />
             </Modal>
         </div>
     );
